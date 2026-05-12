@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Wind Tunnel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Wind Tunnel Simulator</h1>
+            <p>Draw obstacles in the box below and adjust the wind speed.</p>
+        </header>
+
+        <div class="controls">
+            <div class="slider-group">
+                <label for="wind-speed">Wind Speed:</label>
+                <input type="range" id="wind-speed" min="1" max="100" value="50">
+            </div>
+            
+            <div class="button-group">
+                <button id="start-btn" class="primary-btn">Start Wind</button>
+                <button id="stop-btn" class="danger-btn">Stop</button>
+                <button id="clear-btn" class="secondary-btn">Clear Canvas</button>
+            </div>
+        </div>
+
+        <div class="tunnel-container">
+            <canvas id="wind-canvas"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
