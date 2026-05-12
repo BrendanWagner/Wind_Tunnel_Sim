@@ -1,0 +1,108 @@
+/* --- Base Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1a1a24; /* Sleek dark background */
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures the body is at least as tall as the screen */
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* --- Typography & Headers --- */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #4da6ff; /* A cool aerodynamic blue */
+    margin-bottom: 5px;
+}
+
+/* --- Control Panel --- */
+.controls {
+    display: flex;
+    gap: 30px;
+    background-color: #2a2a35;
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.slider-group, .button-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* --- Buttons --- */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s, filter 0.2s;
+}
+
+/* Gives a satisfying click effect */
+button:active {
+    transform: scale(0.95);
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+.primary-btn {
+    background-color: #4da6ff;
+    color: #1a1a24;
+}
+
+.danger-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: #555566;
+    color: white;
+}
+
+/* --- The Wind Tunnel Box --- */
+.tunnel-container {
+    /* 50vw (viewport width) * 50vh (viewport height) = exactly 1/4 of the screen area */
+    width: 50vw; 
+    height: 50vh;
+    min-width: 600px; /* Prevents it from shrinking too much on tiny screens */
+    min-height: 400px;
+    
+    background-color: #0f0f15; /* Even darker to contrast with the page */
+    border: 2px solid #4da6ff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(77, 166, 255, 0.15); /* Subtle neon glow */
+    overflow: hidden;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair; /* Changes the mouse to a drawing cursor */
+}
